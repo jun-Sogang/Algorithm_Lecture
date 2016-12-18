@@ -1,6 +1,2 @@
-for i in range(input()):
-	inStr = raw_input()
-	a = int(inStr[0])
-	b = int(inStr[2])
-	c = a + b
-	print "Case #%d: %d + %d = %d" % (i+1, a, b, c)
+for i in range(1, input()+1):
+	print "Case #{0}: {1}".format(i, str(sum(map(int, raw_input().split()))))
