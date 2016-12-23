@@ -10,6 +10,6 @@ int main(){
 		int temp;
 		scanf("%d",&a[i]);
 	}
-	sort(a,a+n);
+	sort(a,an);
 	cout << a[0] << ' '<< a[n-1] << '\n';
 }
