@@ -1,1 +1,0 @@
-exec"print eval(raw_input().replace(',','+'));"*input()
