@@ -1,15 +1,14 @@
 #include <iostream>
 #include <stack>
 #include <string>
+#include <stdio.h>
 
 using namespace std;
 
 int main() {
 
 	int n;
-
 	cin >> n;
-
 	stack<int> s;
 
 	while (n--) {
@@ -18,34 +17,29 @@ int main() {
 		cin >> order;
 
 		if (order == "push") {
-			int a;
-			cin >> a;
-			s.push(a);
+			int num;
+			cin >> num;
+			s.push(num);
 
 		}
 		else if (order == "top") {
-			printf("%d \n", s.top());
-			if (s.size() == 0)
-				printf("-1 \n");
+			if (!s.empty())
+				printf("%d\n", s.top());
+			else printf("-1\n");
 		}
-
-
-
 		else if (order == "size") {
-			printf("%d \n", s.size());
+			printf("%d\n", s.size());
 		}
-
 		else if (order == "empty") {
-			printf("%d \n", s.empty());
+			printf("%d\n", s.empty());
 		}
-
 		else if (order == "pop") {
-			if (s.size() == 0)
-				printf("-1 \n");
-			else {
-				printf("%d \n", s.top());
+			if (!s.empty()) {
+				printf("%d\n", s.top());
 				s.pop();
 			}
+			else printf("-1\n");
 		}
 	}
+	return 0;
 }
